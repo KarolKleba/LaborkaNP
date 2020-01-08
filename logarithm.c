@@ -66,34 +66,3 @@ int main()
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-if((num/base) > 1) h = 1; //oznacza, ze rozwiazanie logarytmu jest wieksze od 1
-    else if((num/base) == 1)
-    {
-
-        h = 2; //ustawienie h na 2 powoduje nie wykonywanie przyszlej instrukcji switch() poniewaz wynik juz zostal znaleziony
-        res = 1;
-    }
-    else if(num > 1) h = 0; //oznacza, ze rozwiazanie logarytmu znajduje sie pomiedzy 0 a 1
-    else if(num == 1)
-    {
-        h = 2; //ustawienie h na 2 powoduje nie wykonywanie przyszlej instrukcji switch() poniewaz wynik juz zostal znaleziony
-        res = 0;
-    }
-    else h = -1; //oznacza, ze rozwiazanie logarytmu jest mniejsze od 0
-*/
