@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a, potega, pierwiastek;
+    printf ("Podaj dowolna liczbe: ");
+    scanf ("%d", &a);
+    
+    potega=a*a;
+    printf("Potega liczby: %d\n", potega);
+    
+    pierwiastek=sqrt(a);
+    printf("Pierwiastek liczby: %d", pierwiastek);
+    
+    return 0;
+}
