@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, suma, roznica, iloczyn, iloraz;
+    char znak;
+    printf ("Kalkulator prosty\n");
+    printf ("Wpisz dzialanie na dwoch liczbach: ");
+    scanf ("%d", &a);
+    scanf ("%c", &znak);
+    scanf ("%d", &b);
+    
+    if (znak == '+')
+    {
+        suma=a+b;
+        printf ("%d", suma);
+    }
+    
+    if (znak == '-')
+    {
+        roznica=a-b;
+        printf ("%d", roznica);
+    }
+    
+    if (znak == '*')
+    {
+        iloczyn=a*b;
+        printf ("%d", iloczyn);
+    }
+    
+    else
+    {
+        iloraz=a/b;
+        printf ("%d", iloraz);
+    }
+    
+    
+    return 0;
+}
