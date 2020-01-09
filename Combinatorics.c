@@ -3,7 +3,7 @@
 #include <math.h>
 
 
-long int factorial(long int);
+long long int factorial(long long int);
 
 int main()
 {
@@ -27,12 +27,12 @@ int main()
     if(ch == 'x') return 0;
     else
     {
-        long int k = 0, n = 0, res = 0; //'k' i 'n' - oznaczenia zgodne z teoria kombinatoryki
+        long long int k = 0, n = 0, res = 0; //'k' i 'n' - oznaczenia zgodne z teoria kombinatoryki
 
         printf("\nPodaj ilosc elementow w zbiorze:\n");
 	do
 	{
-        	scanf("%ld", &n);
+        scanf("%lld", &n);
 		if(n < 1) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
 		else break;
 	}
@@ -44,59 +44,60 @@ int main()
             {
                 printf("\nPodaj ilosc losowanych elementow:\n");
                 do
-		{
-			scanf("%ld", &k);
-        	        if((k < 1) && (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
-			else break;
-		}
-		while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
+                {
+                    scanf("%lld", &k);
+        	        if((k < 1) || (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
+                    else break;
+                }
+                while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
 
-		res = (factorial(n))/(factorial(k)*factorial(n - k));
-                printf("\nIstnieje %ld mozliwosci wylosowania %ld elementow sposrod %ld (nie istotna kolejnosc)", res, k, n);
+                res = (factorial(n))/(factorial(k)*factorial(n - k));
+                printf("\nIstnieje %lld mozliwosci wylosowania %lld elementow sposrod %lld (nie istotna kolejnosc)", res, k, n);
                 break;
             }
         case 'p':
             {
                 res = factorial(n);
-                printf("\nIstnieje %ld mozliwych ustawien zbioru %ld elementow", res, n);
+                printf("\nIstnieje %lld mozliwych ustawien zbioru %lld elementow", res, n);
                 break;
             }
         case 'w':
             {
                 printf("Podaj ilosc kolejno wybieranych elementow:\n");
                 do
-		{
-			scanf("%ld", &k);
-        	        if((k < 1) && (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
-			else break;
-		}
-		while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
+                {
+                    scanf("%lld", &k);
+        	        if((k < 1) || (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
+                    else break;
+                }
+                while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
 
                 res = pow(n, k);
-                printf("\nIstnieje %ld mozliwosci wylosowania kolejno %ld elementow sposrod %ld (z powtorzeniami)", res, k, n);
+                printf("\nIstnieje %lld mozliwosci wylosowania kolejno %lld elementow sposrod %lld (z powtorzeniami)", res, k, n);
                 break;
             }
         case 'v':
             {
                 printf("Podaj ilosc kolejno wybieranych elementow:\n");
                 do
-		{
-			scanf("%ld", &k);
-        	        if((k < 1) && (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
-			else break;
-		}
-		while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
+                {
+                    scanf("%lld", &k);
+        	        if((k < 1) || (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
+                    else break;
+                }
+                while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
 
                 res = (factorial(n))/(factorial(n - k));
-                printf("\nIstnieje %ld mozliwosci wylosowania kolejno %ld elementow sposrod %ld (bez powtorzen)", res, k, n);
+                printf("\nIstnieje %lld mozliwosci wylosowania kolejno %lld elementow sposrod %lld (bez powtorzen)", res, k, n);
                 break;
             }
         }
     }
 }
 
-long int factorial (long int n)
+long long int factorial (long long int n)
 {
-    if(n > 1) return factorial(n - 1) * n;
-    else return 1;
+    int i = n;
+    n = 1;
+    for(i;i;i--) n *= i;
 }
