@@ -9,7 +9,7 @@ int main(){
     x = x * (3.142 / 180.0);
    
     getchar();
-    printf("Podaj funkcje trygonometryczna (sin(s)/cos(c)/tg(t)): ");
+    printf("Podaj funkcje trygonometryczna (sin(s)/cos(c)/tg(t)/ctg(g)): ");
     scanf("%c", &a);
 
     switch (a)
@@ -18,6 +18,8 @@ int main(){
         case 'c':  printf(" cos %lf \n",cos(x));
             break;
         case 't': printf(" tg %lf \n",tan(x));;
+            break;
+        case 'g': printf(" ctg %lf \n",1/tan(x));;
             break;
     }
     return 0;
