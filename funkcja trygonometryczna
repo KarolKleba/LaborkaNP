@@ -17,9 +17,9 @@ int main(){
             break;
         case 'c':  printf(" cos %lf \n",cos(x));
             break;
-        case 't': printf(" tg %lf \n",tan(x));;
+        case 't': printf(" tg %lf \n",tan(x));
             break;
-        case 'g': printf(" ctg %lf \n",1/tan(x));;
+        case 'g': printf(" ctg %lf \n",1/tan(x));
             break;
     }
     return 0;
