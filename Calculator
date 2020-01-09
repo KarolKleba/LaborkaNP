@@ -6,7 +6,7 @@ int main()
 {
     int a, b, suma, roznica, iloczyn, iloraz;
     char znak;
-    printf ("Kalkulator prosty\n");
+    printf ("Kalkulator prosty.\n");
     printf ("Wpisz dzialanie na dwoch liczbach: ");
     scanf ("%d", &a);
     scanf ("%c", &znak);
