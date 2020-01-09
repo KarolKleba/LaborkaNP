@@ -4,7 +4,7 @@ int main(){
    
    char a;
    double x;
-   printf("Podaj wartosc kata w stopniach : ");
+   printf("Podaj wartosc kata w stopniach: ");
    scanf("%lf",&x);
     x = x * (3.142 / 180.0);
    
@@ -13,13 +13,13 @@ int main(){
     scanf("%c", &a);
 
     switch (a)
-    {   case 's': printf(" sin %lf \n",sin(x));
+    {   case 's': printf(" sin = %lf \n",sin(x));
             break;
-        case 'c':  printf(" cos %lf \n",cos(x));
+        case 'c':  printf(" cos = %lf \n",cos(x));
             break;
-        case 't': printf(" tg %lf \n",tan(x));
+        case 't': printf(" tg = %lf \n",tan(x));
             break;
-        case 'g': printf(" ctg %lf \n",1/tan(x));
+        case 'g': printf(" ctg = %lf \n",1/tan(x));
             break;
     }
     return 0;
