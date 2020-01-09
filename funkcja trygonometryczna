@@ -1,7 +1,8 @@
 #include<stdio.h>
-#include<math.h> 
-int main(){
-   
+#include<math.h>  
+
+int main()
+{
    char a;
    double x;
    printf("Podaj wartosc kata w stopniach: ");
