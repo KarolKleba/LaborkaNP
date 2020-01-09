@@ -5,7 +5,7 @@
 int main()
 {
     int a, potega, pierwiastek;
-    printf ("Podaj liczbe: ");
+    printf ("Podaj dowolna liczbe: ");
     scanf ("%d", &a);
     
     potega=a*a;
