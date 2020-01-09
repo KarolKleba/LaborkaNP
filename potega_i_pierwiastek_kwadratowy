@@ -12,7 +12,7 @@ int main()
     printf("Potega liczby: %d\n", potega);
     
     pierwiastek=sqrt(a);
-    printf("Pierwiastek liczby: %d", pierwiastek);
+    printf("Pierwiastek kwadratowy liczby: %d", pierwiastek);
     
     return 0;
 }
