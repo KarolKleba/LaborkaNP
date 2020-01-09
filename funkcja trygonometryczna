@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<math.h>
+#include<math.h> 
 int main(){
    
    char a;
@@ -9,7 +9,7 @@ int main(){
     x = x * (3.142 / 180.0);
    
     getchar();
-    printf("Podaj funkcje trygonometryczna (sin(s)/cos(c)/tg(t)/ctg(g)): ");
+    printf("Podaj funkcje trygonometryczna (sin(s) / cos(c) / tg(t) / ctg(g)): ");
     scanf("%c", &a);
 
     switch (a)
