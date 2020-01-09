@@ -30,15 +30,28 @@ int main()
         long int k = 0, n = 0, res = 0; //'k' i 'n' - oznaczenia zgodne z teoria kombinatoryki
 
         printf("\nPodaj ilosc elementow w zbiorze:\n");
-        scanf("%ld", &n);
+	do
+	{
+        	scanf("%ld", &n);
+		if(n < 1) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
+		else break;
+	}
+	while (1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
 
         switch(ch)
         {
         case 'c':
             {
                 printf("\nPodaj ilosc losowanych elementow:\n");
-                scanf("%ld", &k);
-                res = (factorial(n))/(factorial(k)*factorial(n - k));
+                do
+		{
+			scanf("%ld", &k);
+        	        if((k < 1) && (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
+			else break;
+		}
+		while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
+
+		res = (factorial(n))/(factorial(k)*factorial(n - k));
                 printf("\nIstnieje %ld mozliwosci wylosowania %ld elementow sposrod %ld (nie istotna kolejnosc)", res, k, n);
                 break;
             }
@@ -51,7 +64,14 @@ int main()
         case 'w':
             {
                 printf("Podaj ilosc kolejno wybieranych elementow:\n");
-                scanf("%ld", &k);
+                do
+		{
+			scanf("%ld", &k);
+        	        if((k < 1) && (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
+			else break;
+		}
+		while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
+
                 res = pow(n, k);
                 printf("\nIstnieje %ld mozliwosci wylosowania kolejno %ld elementow sposrod %ld (z powtorzeniami)", res, k, n);
                 break;
@@ -59,7 +79,14 @@ int main()
         case 'v':
             {
                 printf("Podaj ilosc kolejno wybieranych elementow:\n");
-                scanf("%ld", &k);
+                do
+		{
+			scanf("%ld", &k);
+        	        if((k < 1) && (n < k)) printf("\nPodano zla ilosc. Podaj ilosc jeszcze raz:\n");
+			else break;
+		}
+		while(1); //brak warunku, poniewaz wewnatrz petli znajduje sie warunek, ktory konczy dzialanie
+
                 res = (factorial(n))/(factorial(n - k));
                 printf("\nIstnieje %ld mozliwosci wylosowania kolejno %ld elementow sposrod %ld (bez powtorzen)", res, k, n);
                 break;
